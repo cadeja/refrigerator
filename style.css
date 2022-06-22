@@ -64,14 +64,32 @@ button {
 }
 
 .content {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 5px;
+
     margin: 10px;
     border-radius: 20px;
     padding: 20px;
 
     background-color: var(--content-color);
     height: 100%;
-    width: 50%;
+    width: min(800px, 80%);
 }
+
+.item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+
+    border: 3px solid darkslategray;
+    border-radius: 10px;
+    padding: 5px;
+    height: 30px;
+}
+
 
 .footer {
     display: flex;
