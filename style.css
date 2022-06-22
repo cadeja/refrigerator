@@ -3,26 +3,84 @@ html, body {
     padding: 0;
 }
 
+:root {
+    /* pallette */
+    --base-color: #798BAA;
+    --shade-color: #505f78;
+    --content-color: #bfc2c7;
+}
+
+
+
+
+button {
+    border-radius: 5px;
+    border: 0px;
+    padding: 5px;
+}
+
+
 .page-container {
     min-height: 100vh;
     position: relative;
 
-    background-color: #798BAA;
+    background-color: var(--base-color);
     color: black;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
 }
 
 .header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     height: 5rem;
-    background-color: #505f78;
+    background-color: var(--shade-color);
+}
+
+.title {
+    color: white;
+
+    font-size: 36px;
 }
 
 .content-wrap {
-    background-color: #798BAA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 20px;
+    background-color: var(--base-color);
     padding-bottom: 2.5rem;
 }
 
+.top-panel {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: 50px;
+    gap: 5px;
+}
+
+.content {
+    margin: 10px;
+    border-radius: 20px;
+    padding: 20px;
+
+    background-color: var(--content-color);
+    height: 100%;
+    width: 50%;
+}
+
 .footer {
-    background-color: #505f78;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    background-color: var(--shade-color);
+    color: white;
 
     position: absolute;
     bottom: 0;
